@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    console.log("Main branch")
     // Load toggle button
     loadToggleBtn("body")
     // Load chatbot container
