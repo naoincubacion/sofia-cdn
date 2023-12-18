@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    console.log("Branch curso 1")
     // Load toggle button
     loadToggleBtn("body")
     // Load chatbot container
@@ -82,6 +81,7 @@ const displayUserMessage = (message) => {
 // Send user message to API
 const sendMessageToBot = (message) => {
     // API URL
+    // TODO: Update to llm_canvas API, branch curso-1
     const SOFIA_API_URL = "https://llmcanvas-production.up.railway.app"
     // Show loading state
     $("#loading").trigger("load")
