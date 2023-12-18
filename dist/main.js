@@ -1,6 +1,5 @@
 $(document).ready(function(){
     console.log("Branch curso 1")
-    const SOFIA_API = "https://llmcanvas-production.up.railway.app"
     // Load toggle button
     loadToggleBtn("body")
     // Load chatbot container
@@ -82,13 +81,15 @@ const displayUserMessage = (message) => {
 
 // Send user message to API
 const sendMessageToBot = (message) => {
+    // API URL
+    const SOFIA_API_URL = "https://llmcanvas-production.up.railway.app"
     // Show loading state
     $("#loading").trigger("load")
     // Format message
     question = { question: message }
     // Send message to API
     $.ajax({
-        url: `${SOFIA_API}/generate`,
+        url: `${SOFIA_API_URL}/generate`,
         headers: { 
             'Accept': 'application/json',
             'Content-Type': 'application/json' 
