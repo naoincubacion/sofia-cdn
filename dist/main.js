@@ -82,7 +82,7 @@ const displayUserMessage = (message) => {
 const sendMessageToBot = (message) => {
     // API URL
     // TODO: Update to llm_canvas API, branch curso-1
-    const SOFIA_API_URL = "https://llmcanvas-production.up.railway.app"
+    const SOFIA_API_URL = "https://llmcanvas-production-5769.up.railway.app"
     // Show loading state
     $("#loading").trigger("load")
     // Format message
