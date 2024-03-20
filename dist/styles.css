@@ -79,14 +79,17 @@ body {
 #sofia-toggle-btn {
     position: fixed;
     /* bottom: 1rem; */
-    bottom: 3rem;
-    right: 1rem;
+    /* bottom: 3rem;
+    right: 1rem; */
+    top: 11rem;
+    right: 0;
     border: none;
     padding: 0;
     margin: 0;
     background: none;
     transition: all 0.33s;
     border-radius: 50%;
+    z-index: 100000;
 }
 
 #sofia-toggle-btn img {
@@ -99,12 +102,14 @@ body {
 #sofia-chatbot-container {
     position: fixed;
     /* bottom: calc(1rem + 50px + 1rem); */
-    bottom: calc(3rem + 50px + 1rem);
-    right: 1rem;
+    /* bottom: calc(3rem + 50px + 1rem); */
+    top: 11rem;
+    right: calc(1rem + 50px);
     width: 400px;
     font-family: 'Open Sans', sans-serif;
     border-radius: 0.5rem;
     display: none;
+    z-index: 100001;
 }
 
 /* BEGIN: === Header ==== */
