@@ -88,8 +88,7 @@ const sendMessageToBot = (message) => {
     // Send message to API
     // TODO: Update API version
     $.ajax({
-        // url: "https://llmcanvas-production.up.railway.app/generate",
-        url: "http://localhost:5000/generate",
+        url: "https://llmcanvas-production-2784.up.railway.app/generate",
         headers: { 
             'Accept': 'application/json',
             'Content-Type': 'application/json' 
