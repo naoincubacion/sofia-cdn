@@ -54,7 +54,7 @@ const loadChatbotContainer = (element) => {
             <div id="chat-content" class="content">
                 <div class="reply">
                     <img src="https://ik.imagekit.io/taf6zzl9d/chatbot/sofia.png?updatedAt=1701196091122" alt="bot-profile-picture">
-                    <p>Hola, esta es la presentación inicial de sofIA. Aquí debo incluir en qué te puedo apoyar.</p>
+                    <p>Soy sofIA, su nueva asistente virtual basada en inteligencia artificial. Estoy aquí para simplificar sus desafíos técnicos, desde resolver problemas de código hasta ofrecer orientación en temas tecnológicos de la materia.</p>
                 </div>
                 <div id="loading" class="loading">
                     <div class="dot first"></div>
