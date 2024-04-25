@@ -86,6 +86,7 @@ const sendMessageToBot = (message) => {
     // Format message
     question = { question: message }
     // Send message to API
+    // TODO: Update API version
     $.ajax({
         url: "https://llmcanvas-production.up.railway.app/generate",
         headers: { 
