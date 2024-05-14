@@ -81,8 +81,8 @@ body {
     /* bottom: 1rem; */
     /* bottom: 3rem;
     right: 1rem; */
-    top: 11rem;
-    right: 0;
+    top: 6rem;
+    right: 30px;
     border: none;
     padding: 0;
     margin: 0;
@@ -103,8 +103,8 @@ body {
     position: fixed;
     /* bottom: calc(1rem + 50px + 1rem); */
     /* bottom: calc(3rem + 50px + 1rem); */
-    top: 11rem;
-    right: calc(1rem + 50px);
+    top: 6rem;
+    right: calc(1rem + 50px + 30px);
     width: 400px;
     font-family: 'Open Sans', sans-serif;
     border-radius: 0.5rem;
