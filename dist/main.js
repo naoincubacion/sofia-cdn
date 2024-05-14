@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    console.log("Main branch")
+    console.log("IDS branch")
     // Load toggle button
     loadToggleBtn("body")
     // Load chatbot container
