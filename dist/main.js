@@ -4,10 +4,15 @@ $(document).ready(function(){
     loadToggleBtn("body")
     // Load chatbot container
     loadChatbotContainer("body")
+    // Load cta dialog after 5 seconds
+    setTimeout(function() {
+        loadSofiaDialog($('body')); // Assuming you want to append the dialog to the body
+    }, 2000);
     
     // Toggle chatbot
     $(document).on("click", "#sofia-toggle-btn", function(){
         $("#sofia-chatbot-container").toggle("slow")
+        $("#sofia-dialog").hide("slow") // Close dialog
     })
     // Close chatbot
     $("#close-btn").on("click", function(){
@@ -70,6 +75,22 @@ const loadChatbotContainer = (element) => {
             </form>
         </div>`
     $(element).append(chatbotContainer)
+}
+
+// Load cta dialog to encourage usage
+const loadSofiaDialog = (element) => {
+    let dialog = `
+        <div id="sofia-dialog">
+            <p>Soy sofIA, estoy aquí para resolver tus dudas.</p>
+            <button id="close-sofia-dialog">
+                <img src="https://ik.imagekit.io/taf6zzl9d/chatbot/close.png?updatedAt=1701196924568" alt="close-btn-image">
+            </button>
+        </div>`
+    $(element).append(dialog)
+    // Close dialog
+    $("#close-sofia-dialog").on("click", function(){
+        $("#sofia-dialog").toggle("slow")
+    })
 }
 
 // Display user message

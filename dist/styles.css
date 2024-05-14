@@ -295,6 +295,45 @@ body {
 }
 /* END: === Disabled Form === */
 
+/* BEGIN: === sofIA Dialog === */
+#sofia-dialog {
+    background-color: #fff;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+    color: var(--text-color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    position: fixed;
+    top: calc(6rem);
+    right: calc(1rem + 50px + 30px);
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    z-index: 100001;
+}
+
+#sofia-dialog p {
+    font-size: 12px;
+    margin: 0;
+}
+
+#sofia-dialog button {
+    padding: 0;
+    background: none;
+    border: none;
+    margin: 0;
+    height: 16px;
+}
+#sofia-dialog button:hover {
+    cursor: pointer;
+}
+#sofia-dialog button img {
+    width: 16px;
+}
+/* END: === sofIA Dialog === */
+
 /* === Loading Animation === */
 @keyframes lodadingAnimation {
     0% {
