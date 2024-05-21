@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    console.log("IDS branch")
+    console.log("IDS branch - latest")
     // Load toggle button
     loadToggleBtn("body")
     // Load chatbot container
@@ -81,7 +81,7 @@ const loadChatbotContainer = (element) => {
 const loadSofiaDialog = (element) => {
     let dialog = `
         <div id="sofia-dialog">
-            <p>Soy sofIA, estoy aquí para resolver tus dudas.</p>
+            <p>Soy SofIA, estoy aquí para resolver tus dudas técnicas relacionadas a la materia.</p>
             <button id="close-sofia-dialog">
                 <img src="https://ik.imagekit.io/taf6zzl9d/chatbot/close.png?updatedAt=1701196924568" alt="close-btn-image">
             </button>
