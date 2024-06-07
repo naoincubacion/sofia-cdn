@@ -52,47 +52,22 @@ const generateRandomId = () => {
   );
 };
 
-// Set cookie
-const setCookie = (name, value, days) => {
-  const d = new Date();
-  d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
-  const expires = "expires=" + d.toUTCString();
-  document.cookie = name + "=" + value + ";" + expires + ";path=/";
-  console.log(`Cookie set: ${name}=${value}`);
-};
-
-// Get cookie
-const getCookie = (name) => {
-  const nameEQ = name + "=";
-  const ca = document.cookie.split(";");
-  for (let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == " ") {
-      c = c.substring(1);
-    }
-    if (c.indexOf(nameEQ) == 0) {
-      return c.substring(nameEQ.length, c.length);
-    }
-  }
-  return "";
-};
 
 // Check and set user ID
 const setUserId = () => {
-  let userId = getCookie("userId");
-  console.log(`Retrieved userId from cookie: ${userId}`);
+  let userId = localStorage.getItem("userId");
+  //console.log(`Retrieved userId from localStorage: ${userId}`);
 
-  if (userId === "") {
+  if (!userId) {
     userId = generateRandomId();
-
-    setCookie("userId", userId, 365);
-    console.log(`Generated and set new userId: ${userId}`);
+    localStorage.setItem("userId", userId);
+    //console.log(`Generated and set new userId: ${userId}`);
   }
 };
 
 // Get user ID
 const getUserId = () => {
-  return getCookie("userId");
+  return localStorage.getItem("userId");
 };
 
 // Load toggle button to the selected element
@@ -169,8 +144,8 @@ const sendMessageToBot = (message) => {
     user_id: getUserId(),
   };
 
-  console.log("data");
-  console.log(data);
+  /* console.log("data");
+  console.log(data); */
 
   // Send message to API
   // TODO: Update API version
