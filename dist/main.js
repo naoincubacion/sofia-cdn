@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  console.log("IDS  - current");
+  //console.log("IDS  - current");
   // Load toggle button
   loadToggleBtn("body");
   // Load chatbot container
@@ -42,16 +42,15 @@ $(document).ready(function () {
 
 // Generate a random ID
 const generateRandomId = () => {
-  return "canvas-xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+  return "tbo-xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
     /[xy]/g,
     function (c) {
       const r = (Math.random() * 16) | 0,
         v = c == "x" ? r : (r & 0x3) | 0x8;
       return v.toString(16);
-    }
+    },
   );
 };
-
 
 // Check and set user ID
 const setUserId = () => {
@@ -92,7 +91,7 @@ const loadChatbotContainer = (element) => {
             <div id="chat-content" class="content">
                 <div class="reply">
                     <img src="https://ik.imagekit.io/taf6zzl9d/chatbot/sofia.png?updatedAt=1701196091122" alt="bot-profile-picture">
-                    <p>Soy sofIA, su nueva asistente virtual basada en inteligencia artificial. Estoy aquí para simplificar sus desafíos técnicos, desde resolver problemas de código hasta ofrecer orientación en temas tecnológicos de la materia.</p>
+                    <p>Soy sofIA, tu asistente especializada en Tecmilenio. Estoy aquí para simplificar tus procesos, desde conocer los eventos de la Universidad, hasta conocer las diferentes carreras y servicios que les podemos dar a los estudiantes, estoy aquí para apoyarte.</p>
                 </div>
                 <div id="loading" class="loading">
                     <div class="dot first"></div>
@@ -114,7 +113,7 @@ const loadChatbotContainer = (element) => {
 const loadSofiaDialog = (element) => {
   let dialog = `
         <div id="sofia-dialog">
-            <p>Soy SofIA, estoy aquí para resolver tus dudas técnicas relacionadas a la materia.</p>
+            <p>Soy SofIA, estoy aquí para apoyarte y acompañarte.</p>
             <button id="close-sofia-dialog">
                 <img src="https://ik.imagekit.io/taf6zzl9d/chatbot/close.png?updatedAt=1701196924568" alt="close-btn-image">
             </button>
@@ -148,10 +147,8 @@ const sendMessageToBot = (message) => {
   console.log(data); */
 
   // Send message to API
-  // TODO: Update API version
   $.ajax({
-    // TODO: change the url to production
-    url: "https://llmcanvas-production-2784.up.railway.app/mentor",
+    url: "https://sofiaadmisiones.nowisnao.com/alex-api/mentor",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -203,6 +200,6 @@ const scrollToBottom = (duration) => {
     {
       scrollTop: $("#chat-content").prop("scrollHeight"),
     },
-    duration
+    duration,
   );
 };
