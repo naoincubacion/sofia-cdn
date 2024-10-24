@@ -75,13 +75,26 @@ body {
 /* === END: General === */
 
 /* === BEGIN: Toggle Button === */
-#sofia-toggle-btn {
+/*#sofia-toggle-btn {
     position: fixed;
     /* bottom: 1rem; */
-    /* bottom: 3rem;
-    right: 1rem; */
+/* bottom: 3rem;
+    right: 1rem;
     top: 6rem;
     right: 30px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    transition: all 0.33s;
+    border-radius: 50%;
+    z-index: 100000;
+}*/
+
+#sofia-toggle-btn {
+    position: absolute; /* Ensure it stays relative to the body */
+    bottom: 2.5rem; /* Adjust as needed */
+    right: 2rem; /* Adjust as needed */
     border: none;
     padding: 0;
     margin: 0;
@@ -98,12 +111,25 @@ body {
 /* === END: Toggle Button === */
 
 /* BEGIN: === Chatbot === */
-#sofia-chatbot-container {
+/*#sofia-chatbot-container {
     position: fixed;
     /* bottom: calc(1rem + 50px + 1rem); */
-    /* bottom: calc(3rem + 50px + 1rem); */
+/* bottom: calc(3rem + 50px + 1rem);
     top: 6rem;
     right: calc(1rem + 52px + 30px);
+    width: 400px;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 0.5rem;
+    display: none;
+    z-index: 100001;
+}*/
+
+#sofia-chatbot-container {
+    position: absolute; /* Stay aligned with #sofia-toggle-btn */
+    bottom: calc(
+        2.5rem + 50px + 1rem
+    ); /* Just above the toggle button (adjust height if needed) */
+    right: 2rem;
     width: 400px;
     font-family: "Open Sans", sans-serif;
     border-radius: 0.5rem;

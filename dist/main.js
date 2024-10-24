@@ -5,9 +5,9 @@ $(document).ready(function () {
   // Load chatbot container
   loadChatbotContainer("body");
   // Load cta dialog after 5 seconds
-  setTimeout(function () {
-    loadSofiaDialog($("body")); // Assuming you want to append the dialog to the body
-  }, 2000);
+  /*setTimeout(function () {
+    loadSofiaDialog($("body"));
+  }, 2000);*/
 
   // Toggle chatbot
   $(document).on("click", "#sofia-toggle-btn", function () {
