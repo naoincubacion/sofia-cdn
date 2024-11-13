@@ -148,7 +148,7 @@ const sendMessageToBot = (message) => {
 
   // Send message to API
   $.ajax({
-    url: "https://sofiaadmisiones.nowisnao.com/alex-api/mentor",
+    url: "https://sofiaadmisiones.nowisnao.com/tbox-api/mentor",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
